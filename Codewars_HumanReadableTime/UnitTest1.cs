@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Codewars_HumanReadableTime
@@ -56,7 +57,13 @@ namespace Codewars_HumanReadableTime
         [TestMethod]
         public void Input_0_Should_Be_00_00_00()
         {
-            Assert.AreEqual("00:00:00",TimeFormat.GetReadableTime(0));
+            Assert.AreEqual("00:00:00", TimeFormat.GetReadableTime(0));
+        }
+
+        [TestMethod]
+        public void Input_5_Should_Be_00_00_05()
+        {
+            Assert.AreEqual("00:00:05", TimeFormat.GetReadableTime(5));
         }
 
     }
@@ -80,7 +87,16 @@ namespace Codewars_HumanReadableTime
 
         public static string GetReadableTime(int num)
         {
-            throw new System.NotImplementedException();
+            var hour = GetHour(num).ToString();
+            var min = GetMin(num).ToString();
+            var sec = GetSec(num).ToString();
+            if (Convert.ToInt32(hour) < 10)
+                hour = "0" + hour;
+            if (Convert.ToInt32(min) < 10)
+                min = "0" + min;
+            if (GetSec(num) < 10)
+                sec = "0" + sec;
+            return hour + ":" + min + ":" + sec;
         }
     }
 }
