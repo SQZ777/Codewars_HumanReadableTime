@@ -10,6 +10,12 @@ namespace Codewars_HumanReadableTime
         {
             Assert.AreEqual(0, TimeFormat.GetHour(0));
         }
+
+        [TestMethod]
+        public void GetHour_Input_3600_Should_Be_1()
+        {
+            Assert.AreEqual(1,TimeFormat.GetHour(3600));
+        }
     }
 
     public class TimeFormat
