@@ -20,13 +20,13 @@ namespace Codewars_HumanReadableTime
         [TestMethod]
         public void GetMin_Input_0_Should_Be_0()
         {
-            Assert.AreEqual(0,TimeFormat.GetMin(0));
+            Assert.AreEqual(0, TimeFormat.GetMin(0));
         }
 
         [TestMethod]
         public void GetMin_Input_3600_Should_Be_0()
         {
-            Assert.AreEqual(0,TimeFormat.GetMin(3600));
+            Assert.AreEqual(0, TimeFormat.GetMin(3600));
         }
 
     }
@@ -40,7 +40,8 @@ namespace Codewars_HumanReadableTime
 
         public static int GetMin(int num)
         {
-            return 0;
+
+            return num % 3600;
         }
     }
 }
