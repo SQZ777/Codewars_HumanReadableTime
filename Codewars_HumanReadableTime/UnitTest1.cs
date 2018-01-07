@@ -33,7 +33,7 @@ namespace Codewars_HumanReadableTime
 
         public static int GetMin(int num)
         {
-            throw new System.NotImplementedException();
+            return 0;
         }
     }
 }
