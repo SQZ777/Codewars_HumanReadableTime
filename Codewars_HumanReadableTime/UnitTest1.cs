@@ -22,6 +22,13 @@ namespace Codewars_HumanReadableTime
         {
             Assert.AreEqual(0,TimeFormat.GetMin(0));
         }
+
+        [TestMethod]
+        public void GetMin_Input_3600_Should_Be_0()
+        {
+            Assert.AreEqual(0,TimeFormat.GetMin(3600));
+        }
+
     }
 
     public class TimeFormat
