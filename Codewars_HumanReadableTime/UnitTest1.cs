@@ -6,8 +6,17 @@ namespace Codewars_HumanReadableTime
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void GetHour_Input_0_Should_Be_0()
         {
+            Assert.AreEqual(0, TimeFormat.GetHour(0));
+        }
+    }
+
+    public class TimeFormat
+    {
+        public static int GetHour(int num)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
