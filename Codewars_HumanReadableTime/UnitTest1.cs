@@ -38,9 +38,9 @@ namespace Codewars_HumanReadableTime
         [TestMethod]
         public void GetSec_Input_0_Should_Be_0()
         {
-            Assert.AreEqual(0,TimeFormat.GetSec(0));
+            Assert.AreEqual(0, TimeFormat.GetSec(0));
         }
-        
+
         [TestMethod]
         public void GetSec_Input_100_Should_Be_40()
         {
@@ -62,7 +62,7 @@ namespace Codewars_HumanReadableTime
 
         public static int GetSec(int num)
         {
-            return 0;
+            return num % 60;
         }
     }
 }
