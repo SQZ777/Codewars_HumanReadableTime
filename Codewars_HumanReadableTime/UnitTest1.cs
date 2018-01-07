@@ -72,6 +72,18 @@ namespace Codewars_HumanReadableTime
             Assert.AreEqual("00:01:00", TimeFormat.GetReadableTime(60));
         }
 
+        [TestMethod]
+        public void Input_86399_Should_Be_23_59_59()
+        {
+            Assert.AreEqual("23:59:59", TimeFormat.GetReadableTime(86399));
+        }
+
+        [TestMethod]
+        public void Input_359999_Should_Be_99_99_99()
+        {
+            Assert.AreEqual("99:59:59", TimeFormat.GetReadableTime(359999));
+        }
+
     }
 
     public class TimeFormat
