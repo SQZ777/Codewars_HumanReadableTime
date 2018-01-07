@@ -46,6 +46,13 @@ namespace Codewars_HumanReadableTime
         {
             Assert.AreEqual(40, TimeFormat.GetSec(100));
         }
+
+        [TestMethod]
+        public void GetSec_Input_3600_Should_Be_0()
+        {
+            Assert.AreEqual(0, TimeFormat.GetSec(3600));
+        }
+
     }
 
     public class TimeFormat
