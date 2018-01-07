@@ -16,7 +16,7 @@ namespace Codewars_HumanReadableTime
     {
         public static int GetHour(int num)
         {
-            throw new System.NotImplementedException();
+            return 0;
         }
     }
 }
