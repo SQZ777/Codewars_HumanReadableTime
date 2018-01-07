@@ -29,6 +29,12 @@ namespace Codewars_HumanReadableTime
             Assert.AreEqual(0, TimeFormat.GetMin(3600));
         }
 
+        [TestMethod]
+        public void GetMin_Input_100_Should_Be_1()
+        {
+            Assert.AreEqual(1, TimeFormat.GetMin(100));
+        }
+
     }
 
     public class TimeFormat
@@ -40,8 +46,7 @@ namespace Codewars_HumanReadableTime
 
         public static int GetMin(int num)
         {
-
-            return num % 3600;
+            return num / 60 % 60;
         }
     }
 }
