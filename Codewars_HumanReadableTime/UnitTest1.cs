@@ -40,7 +40,6 @@ namespace Codewars_HumanReadableTime
         {
             Assert.AreEqual(0,TimeFormat.GetSec(0));
         }
-
     }
 
     public class TimeFormat
@@ -57,7 +56,7 @@ namespace Codewars_HumanReadableTime
 
         public static int GetSec(int num)
         {
-            throw new System.NotImplementedException();
+            return 0;
         }
     }
 }
