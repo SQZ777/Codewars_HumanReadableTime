@@ -66,6 +66,12 @@ namespace Codewars_HumanReadableTime
             Assert.AreEqual("00:00:05", TimeFormat.GetReadableTime(5));
         }
 
+        [TestMethod]
+        public void Input_60_Should_Be_00_01_00()
+        {
+            Assert.AreEqual("00:01:00", TimeFormat.GetReadableTime(60));
+        }
+
     }
 
     public class TimeFormat
