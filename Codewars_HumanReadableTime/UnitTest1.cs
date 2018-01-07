@@ -53,6 +53,12 @@ namespace Codewars_HumanReadableTime
             Assert.AreEqual(0, TimeFormat.GetSec(3600));
         }
 
+        [TestMethod]
+        public void Input_0_Should_Be_00_00_00()
+        {
+            Assert.AreEqual("00:00:00",TimeFormat.GetReadableTime(0));
+        }
+
     }
 
     public class TimeFormat
@@ -70,6 +76,11 @@ namespace Codewars_HumanReadableTime
         public static int GetSec(int num)
         {
             return num % 60;
+        }
+
+        public static string GetReadableTime(int num)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
